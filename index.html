@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+
+    <title>Fakeshoes</title>
+
+    <style>
+        
+
+    </style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Obtém o elemento "Campeonatos"
+        var campeonatosItem = document.querySelector('.list-menu li:has(> a:contains("Campeonatos"))');
+
+        // Obtém o elemento do dropdown
+        var dropdownMenu = document.querySelector('.dropdow-menu');
+
+        // Adiciona ouvintes de evento para o mouse entrar e sair do item "Campeonatos"
+        campeonatosItem.addEventListener("mouseenter", function () {
+            // Adiciona a classe 'active' para mostrar o dropdown
+            dropdownMenu.classList.add('active');
+        });
+
+        campeonatosItem.addEventListener("mouseleave", function () {
+            // Remove a classe 'active' para esconder o dropdown
+            dropdownMenu.classList.remove('active');
+        });
+
+        // Adiciona ouvintes de evento para o mouse entrar e sair do dropdown
+        dropdownMenu.addEventListener("mouseenter", function () {
+            // Mantém a classe 'active' para manter o dropdown visível
+            dropdownMenu.classList.add('active');
+        });
+
+        dropdownMenu.addEventListener("mouseleave", function () {
+            // Remove a classe 'active' para esconder o dropdown
+            dropdownMenu.classList.remove('active');
+        });
+    });
+</script>
+
+</head>
+<body>
+
+    <header>
+        <div class="content">
+
+            <div class="logo">
+                <img src="img/logo.png" alt="Logo">
+                <h3>Fakeshoes</h3>
+            </div>
+
+            <ul class="list-menu">
+                <li><a href="#home">Início</a></li>
+
+                <li class="camp"><a href="#Campeonatos">Campeonatos <i class="fas fa-caret-down"></i></a>
+
+                    <div class="dropdow-menu">
+                        <ul>
+                            <li><a href="#">Brasileirão</a></li>
+                            <li><a href="#">La Liga</a></li>
+                            <li><a href="#">Premier League</a></li>
+                            <li><a href="#">Serie A</a></li>
+
+                        </ul>
+                    </div>
+
+                </li>
+                
+                <li><a href="carrinho.html"><i class="bi bi-cart-fill"></i> </a></li>
+                <li><a href="assets/html/signin.html"><i class="bi bi-person-fill" style="height: 15px; width: 10px;"></i> </a></li>
+            </ul>
+
+            <div class="menu-toggle">
+                <div class="one"></div>
+                <div class="two"></div>
+                <div class="three"></div>
+            </div>
+
+        </div>
+    
+    </header>
+    
+    <section class="first-section" id="home">
+        
+        <div class="conteudo-principal">
+            <h1>Camisas de time com o melhor preço.</h1>
+            <h2>Produzindo camisetas e realizando paixões.</h2>
+        </div>    
+    </section> 
+
+   <section class="ambientes" id="Campeonatos">
+
+        <h2>Campeonatos</h2>
+
+        <div class="list-ambient">
+
+            <div class="cozinha">
+                <img src="img/Brasileirao.png" alt="Logo Brasileirão">
+                <div class="info">
+                    <h3>Brasileirão</h3>
+                    <p>No universo das camisas de time do Brasileirão, vestimos a paixão, celebramos as cores e honramos as histórias 
+                        escritas em cada partida. Seja parte desse legado, vista sua emoção!
+                    </p>
+                    <a href="cozinha.html"><button class="ver-mais">Ver Camisas</button></a>
+                </div>
+            </div>
+
+            <div class="quarto">
+                <img src="img/La liga.png" alt="Logo La Liga">
+                <div class="info">
+                    <h3>La Liga</h3>
+                    <p>Em cada camisa da La Liga, celebramos a tradição, exaltamos as rivalidades e homenageamos os momentos épicos 
+                        que ecoam pelos estádios espanhóis. Em cada jersey, carregamos o espírito vibrante do futebol ibérico. 
+                        Sinta a intensidade, viva a emoção!
+                    </p>
+                    <a href="quarto.html"><button class="ver-mais">Ver Camisas</button></a>
+                </div>
+            </div>
+
+            <div class="sala">
+                <img src="img/premier-legue.png" alt="Logo Premier League">
+                <div class="info">
+                    <h3>Premier League</h3>
+                    <p>Na Premier League, as camisas são mais do que vestimentas; são testemunhas de momentos históricos e vitórias 
+                        emocionantes. Cada jersey conta a história de um clube, seus heróis e a emoção inigualável dos jogos ingleses. 
+                        Vista o orgulho, sinta a energia!
+                    </p>
+                    <a href="sala.html"><button class="ver-mais">Ver Camisas</button></a>
+                </div>
+            </div>
+
+            <div class="banheiro">
+                <img src="img/serie-a (1).png" alt="Logo Serie A">
+                <div class="info">
+                    <h3>Serie A</h3>
+                    <p>Na Serie A, cada camisa é uma expressão de paixão pelo futebol italiano, onde a arte encontra a competição nas 
+                        quatro linhas. Em cada jersey, respiramos o encanto das tácticas refinadas e da tradição calcio.
+                    </p>
+                    <a href="banheiro.html"><button class="ver-mais">Ver Camisas</button></a>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="contatos" id="contatos">
+
+        <h3>Contatos</h3>
+        
+        <div class="contatos-secao">
+
+            <div>
+                <i class="bi bi-whatsapp"><span> (47) 9 9729-8752</span></i>
+            </div>
+            <div>
+                <i class="bi bi-facebook"><span> Fakeshoes</span></i>
+            </div>
+            <div>
+                <i class="bi bi-instagram"><span> Fakeshoes</span></i>
+            </div>
+            <div>
+                <i class="bi bi-threads"><span> Fakeshoes</span></i>
+            </div>
+            <div>
+                <i class="bi bi-geo-alt-fill"><span> São Bento do Sul-SC</span></i>
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer>
+        <h4>Desenvolvido por -> Edinei Samuel</h4>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>
