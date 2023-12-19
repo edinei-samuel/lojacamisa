@@ -12,55 +12,52 @@
     <title>Singup</title>
   </head>
   <body>
-    <div class="container">
-      <div class="card">
-        <h1>Cadastrar</h1>
-
-        <div id="msgError"></div>
-        <div id="msgSuccess"></div>
+    <form id="myForm" action="../../cadastrar.php" method="post">
+      <div class="container">
+        <!-- ... (seu código restante) ... -->
 
         <div class="label-float">
-          <input type="text" id="nome" placeholder=" " required />
+          <input type="text" id="nome" name="nome" placeholder=" " required />
           <label id="labelNome" for="nome">Nome</label>
         </div>
 
         <div class="label-float">
-            <input type="text" id="usuario" placeholder=" " required />
-            <label id="labelUsuario" for="usuario">Usuário</label>
-          </div>
+          <input type="text" id="usuario" name="usuario" placeholder=" " required />
+          <label id="labelUsuario" for="usuario">Usuário</label>
+        </div>
 
         <div class="label-float">
-            <input type="text" id="cpf" placeholder=" " maxlength="14" required />
-            <label id="labelCpf" for="cpf">CPF</label>
-          </div>
-      
-          <script>
-            document.getElementById('cpf').addEventListener('input', function (event) {
-              let inputValue = event.target.value;
-              inputValue = inputValue.replace(/\D/g, ''); // Remove caracteres não numéricos
-      
-              if (inputValue.length > 3) {
-                inputValue = inputValue.replace(/(\d{3})(\d{1,2})/, '$1.$2');
-              }
-      
-              if (inputValue.length > 6) {
-                inputValue = inputValue.replace(/(\d{3})(\d{3})(\d{1,2})/, '$1.$2.$3');
-              }
-      
-              if (inputValue.length > 9) {
-                inputValue = inputValue.replace(/(\d{3})(\d{3})(\d{3})(\d{1,2})/, '$1.$2.$3-$4');
-              }
-      
-              event.target.value = inputValue;
-            });
-      
-            document.getElementById('myForm').addEventListener('submit', function (event) {
-              event.preventDefault(); // Prevent the form from submitting for this example
-              const cpfValue = document.getElementById('cpf').value.replace(/\D/g, ''); // Remove caracteres não numéricos
-              alert('CPF digitado: ' + cpfValue);
-              // Adicione o código para processar o CPF aqui
-            });
-          </script>
+          <input type="text" id="cpf" name="cpf" placeholder=" " maxlength="14" required />
+          <label id="labelCpf" for="cpf">CPF</label>
+        </div>
+
+        <script>
+          document.getElementById('cpf').addEventListener('input', function (event) {
+            let inputValue = event.target.value;
+            inputValue = inputValue.replace(/\D/g, ''); // Remove caracteres não numéricos
+    
+            if (inputValue.length > 3) {
+              inputValue = inputValue.replace(/(\d{3})(\d{1,2})/, '$1.$2');
+            }
+    
+            if (inputValue.length > 6) {
+              inputValue = inputValue.replace(/(\d{3})(\d{3})(\d{1,2})/, '$1.$2.$3');
+            }
+    
+            if (inputValue.length > 9) {
+              inputValue = inputValue.replace(/(\d{3})(\d{3})(\d{3})(\d{1,2})/, '$1.$2.$3-$4');
+            }
+    
+            event.target.value = inputValue;
+          });
+    
+          document.getElementById('myForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the form from submitting for this example
+            const cpfValue = document.getElementById('cpf').value.replace(/\D/g, ''); // Remove caracteres não numéricos
+            alert('CPF digitado: ' + cpfValue);
+            // Adicione o código para processar o CPF aqui
+          });
+        </script>
 
         <div class="label-float">
           <input type="password" id="senha" placeholder=" " required />
@@ -71,22 +68,23 @@
         <div class="label-float">
           <input type="password" id="confirmSenha" placeholder=" " required />
           <label id="labelConfirmSenha" for="confirmSenha"
-            >Confirmar Senha</label
-          >
+            >Confirmar Senha</label>
           <i id="verConfirmSenha" class="fa fa-eye" aria-hidden="true"></i>
         </div>
 
-        <div class="justify-center">
-          <button onclick="cadastrar()">Cadastrar</button>
-        </div>
-      </div>
-
-    <div class="card">
-        <img src="../../img/logo.png" alt="Your Image" />
-        <!-- Content of the second container goes here -->
+      <div class="justify-center">
+        <button onclick="cadastrar()">Cadastrar</button>
       </div>
     </div>
 
+  <div class="card">
+      <img src="../../img/logo.png" alt="Your Image" />
+      <!-- Content of the second container goes here -->
+    </div>
+  </div>
+
+</form>
+ 
     <script src="../js/signup.js"></script>
   </body>
 </html>
